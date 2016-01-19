@@ -1,12 +1,12 @@
-package Factory;
+package AbstractFactory;
 
-/**
+/*
  * Created by root on 19.01.16.
  */
-public class WarsawPizzaIngredientFactory implements PizzaIngredientFactory {
+public class WroclawPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Sauce createSauce() {
-        return new WarsawSauce();
+        return new WroclawSauce();
     }
 
     @Override
@@ -16,7 +16,7 @@ public class WarsawPizzaIngredientFactory implements PizzaIngredientFactory {
 
     @Override
     public Pepperoni createPepperoni() {
-        return new HotPepperoni();
+        return new MildPepperoni();
     }
 
     @Override

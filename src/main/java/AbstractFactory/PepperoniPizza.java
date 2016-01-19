@@ -1,13 +1,13 @@
-package Factory;
+package AbstractFactory;
 
 /**
  * Created by root on 19.01.16.
  */
-public class CheesePizza extends Pizza {
+public class PepperoniPizza extends Pizza {
 
     PizzaIngredientFactory pizzaIngredientFactory;
 
-    public CheesePizza(PizzaIngredientFactory pizzaIngredientFactory) {
+    public PepperoniPizza(PizzaIngredientFactory pizzaIngredientFactory) {
         this.pizzaIngredientFactory = pizzaIngredientFactory;
     }
 
