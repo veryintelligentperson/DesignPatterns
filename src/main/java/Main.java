@@ -1,6 +1,8 @@
 import AbstractFactory.PizzaStore;
 import AbstractFactory.WarsawPizzaStore;
 import AbstractFactory.WroclawPizzaStore;
+import Prototype.CloneFactory;
+import Prototype.Sheep;
 import Strategy.*;
 
 /**
@@ -9,13 +11,10 @@ import Strategy.*;
 public class Main {
     public static void main(String[] args) {
 
-        ElectronicDevice telewizor = new Tv();
-        ElectronicDevice telefon = new MobilePhone();
-
-        System.out.println(telewizor.getName() + " is remote: " + telewizor.isRemote());
-        System.out.println(telefon.getName() + " is remote: " + telefon.isRemote() + "\n");
-        telewizor.setRemote(new Charged());
-        System.out.println(telewizor.getName() + " is remote: " + telewizor.isRemote());
+        CloneFactory animalMaker = new CloneFactory();
+        Sheep someSheep = new Sheep();
+        Sheep clonedSheep = (Sheep) animalMaker.getClone(someSheep);
+        System.out.println(someSheep.equals(clonedSheep));
 
     }
 }
